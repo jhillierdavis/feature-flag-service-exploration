@@ -2,12 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 // Use Launch Darkly service for feature flags
 import { withLDProvider, useFlags } from 'launchdarkly-react-client-sdk' 
+import ldlogo from './launch-darkly-logo.png'
 
 function App() {
+  const { imageSwitch } = useFlags()
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {
+          // Use LD feature flag to switch between logos (LD logo & default)
+          imageSwitch ? ( <img src={ldlogo} className="App-logo" alt="logo" /> ) : ( <img src={logo} className="App-logo" alt="logo" /> )
+        }
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -28,7 +34,7 @@ function App() {
 
 // Wrap application in LD provider
 export default withLDProvider ({
-  clientSIdeID: 'TODO',
+  clientSideID: 'TODO: Add Launch Darkly ID',
   options: {
     bootstrap: 'localStorage'
   },
