@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+// Use Launch Darkly service for feature flags
+import { withLDProvider, useFlags } from 'launchdarkly-react-client-sdk' 
 
 function App() {
   return (
@@ -22,4 +24,12 @@ function App() {
   );
 }
 
-export default App;
+// export default App;
+
+// Wrap application in LD provider
+export default withLDProvider ({
+  clientSIdeID: 'TODO',
+  options: {
+    bootstrap: 'localStorage'
+  },
+})(App);
