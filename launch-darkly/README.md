@@ -12,7 +12,7 @@ Create initial LD (Launch Darkly) React App.:
 
 `npm install launchdarkly-react-client-sdk`
 
-`npm audit`
+`npm audit fix --force`
 
 # References
 
