@@ -1,3 +1,7 @@
+// Avoid Error: 'React' must be in scope when using JSX react/react-in-jsx-scope
+// import React, { Component } from 'react';
+import React from 'react';
+
 import logo from './logo.svg';
 import './App.css';
 // Use Launch Darkly service for feature flags
