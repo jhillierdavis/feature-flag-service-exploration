@@ -8,5 +8,5 @@ echo "NPM installation info:"
 echo "Latest: ${LATEST_VERSION}" 
 echo "Current: ${CURRENT_VERSION}"
 echo "Which NPM: ${WHICH_NPM}"
-echo ""
+echo -e "Update via NVM using 'nvm install-latest-npm'\n"
 
