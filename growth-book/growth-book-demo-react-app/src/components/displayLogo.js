@@ -1,6 +1,6 @@
 // Avoid error: 'React' must be in scope when using JSX  react/react-in-jsx-scope
 import React from 'react';
-import { IfFeatureEnabled, useFeature } from "@growthbook/growthbook-react";
+import { useFeature } from "@growthbook/growthbook-react";
 
 import logo from '../logo.svg'
 import growthBookLogo from '../growthbook-logo.png'

@@ -1,11 +1,9 @@
 import React from 'react'
-import logo from './logo.svg'
 import './App.css'
 
 // GrowthBook imports
-import { GrowthBook, GrowthBookProvider, useFeature, IfFeatureEnabled, FeatureString } from "@growthbook/growthbook-react";
+import { GrowthBook, GrowthBookProvider, IfFeatureEnabled, FeatureString } from "@growthbook/growthbook-react";
 import { useEffect } from "react";
-import growthBookLogo from './growthbook-logo.png'
 
 import Header from './components/header'
 import DisplayLogo from './components/displayLogo'
@@ -46,9 +44,6 @@ function App() {
 
     return () => clearInterval(interval);
   }, [])
-
-  const logoSwitchEnabled = growthbook.isOn("logo-switch-enabled")
-  
 
   return (
     <GrowthBookProvider growthbook={growthbook}>
