@@ -22,27 +22,29 @@ const growthbook = new GrowthBook({
 
 function App() {
   useEffect(() => {
-    // Load feature definitions from API
-    // In production, we recommend putting a CDN in front of the API endpoint
-    fetch("http://localhost:3100/api/features/key_prod_144d3a5d0a19dc02")
-      .then((res) => res.json())
-      .then((json) => {
-        growthbook.setFeatures(json.features);
-      });
+    const interval = setInterval(() => {
+      // Load feature definitions from API
+      // In production, we recommend putting a CDN in front of the API endpoint
+      fetch("http://localhost:3100/api/features/key_prod_144d3a5d0a19dc02")
+        .then((res) => res.json())
+        .then((json) => {
+          growthbook.setFeatures(json.features);
+        });
 
-    // TODO: replace with real targeting attributes
-    growthbook.setAttributes({
-      "id": "foo",
-      "deviceId": "foo",
-      "company": "foo",
-      "loggedIn": true,
-      "employee": true,
-      "country": "foo",
-      "browser": "foo",
-      "url": "foo"
-    })
+      // TODO: replace with real targeting attributes
+      growthbook.setAttributes({
+        "id": "foo",
+        "deviceId": "foo",
+        "company": "foo",
+        "loggedIn": true,
+        "employee": true,
+        "country": "foo",
+        "browser": "foo",
+        "url": "foo"
+      })
+    }, 1000);
 
-
+    return () => clearInterval(interval);
   }, [])
 
   const logoSwitchEnabled = growthbook.isOn("logo-switch-enabled")
