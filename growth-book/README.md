@@ -5,10 +5,18 @@
 
 'npx create-react-app growth-book-demo-react-app'
 
+'cd growth-book-demo-react-app'
+
+'npm i --save @growthbook/growthbook-react'
+
+'npm audit fix --force'
 
 # References
 
 https://docs.growthbook.io/self-host
 https://docs.growthbook.io/guide/create-react-app-and-growthbook
 
-YouTube: How to use feature flags with GrowthBook: https://www.youtube.com/watch?v=owz9U11rlGA
+Articles: 
+
+Feature Flags with Next.js and GrowthBook: https://dev.to/jdorn/feature-flags-with-nextjs-and-growthbook-4ide
+How to set an interval in React (with examples): https://devtrium.com/posts/set-interval-react
