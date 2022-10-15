@@ -2,9 +2,12 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 
-import { GrowthBook, GrowthBookProvider, useFeature } from "@growthbook/growthbook-react";
+// GrowthBook imports
+import { GrowthBook, GrowthBookProvider, useFeature, IfFeatureEnabled, FeatureString } from "@growthbook/growthbook-react";
 import { useEffect } from "react";
-import growthBookLogo from './growth-book-logo.png'
+import growthBookLogo from './growthbook-logo.png'
+
+import Header from './components/header'
 
 // Create a GrowthBook instance
 const growthbook = new GrowthBook({
@@ -41,14 +44,23 @@ function App() {
 
   }, [])
 
+  const logoSwitchEnabled = growthbook.isOn("logo-switch-enabled")
+  
+
   return (
     <GrowthBookProvider growthbook={growthbook}>
     <div className="App">
-      <header className="App-header">              
-          <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header">    
+        <IfFeatureEnabled feature="header-enabled">
+          <Header />
+        </IfFeatureEnabled>                       
         <p>
-           TODO
+        {
+          // Use GrowthBook feature flag to switch between logos (GrowthBook logo or default ReactJS logox)
+          logoSwitchEnabled ? ( <img src={growthBookLogo} className="App-logo" alt="logo" /> ) : ( <img src={logo} className="App-logo" alt="logo" /> )
+        }
         </p>
+        <FeatureString feature="bottom-text-enabled" default="Default" />
         <a
           className="App-link"
           href="https://reactjs.org"
