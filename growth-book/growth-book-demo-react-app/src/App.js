@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from './logo.svg';
+import logo from './logo.svg'
+import './App.css'
 
 import { GrowthBook, GrowthBookProvider, useFeature } from "@growthbook/growthbook-react";
 import { useEffect } from "react";
@@ -62,4 +63,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
