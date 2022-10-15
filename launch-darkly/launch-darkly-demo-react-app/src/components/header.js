@@ -1,3 +1,6 @@
+// Avoid error: 'React' must be in scope when using JSX  react/react-in-jsx-scope
+import React from 'react';
+
 export default function  Header() {
     return (
         <div>
