@@ -7,13 +7,15 @@ import './App.css';
 // Use Launch Darkly service for feature flags
 import { withLDProvider, useFlags } from 'launchdarkly-react-client-sdk' 
 import ldlogo from './launch-darkly-logo.png'
+import Header from './components/header'
 
 function App() {
-  const { logoSwitchEnabled, bottomTextEnabled } = useFlags()
+  const { logoSwitchEnabled, bottomTextEnabled, headerEnabled } = useFlags()
 
   return (
     <div className="App">
       <header className="App-header">
+        { headerEnabled ? ( <Header /> ) : ( <div /> ) }
         {
           // Use LD feature flag to switch between logos (LD logo or default ReactJS logox)
           logoSwitchEnabled ? ( <img src={ldlogo} className="App-logo" alt="logo" /> ) : ( <img src={logo} className="App-logo" alt="logo" /> )
