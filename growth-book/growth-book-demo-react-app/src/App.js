@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import growthBookLogo from './growthbook-logo.png'
 
 import Header from './components/header'
+import DisplayLogo from './components/displayLogo'
 
 // Create a GrowthBook instance
 const growthbook = new GrowthBook({
@@ -55,10 +56,7 @@ function App() {
           <Header />
         </IfFeatureEnabled>                       
         <p>
-        {
-          // Use GrowthBook feature flag to switch between logos (GrowthBook logo or default ReactJS logox)
-          logoSwitchEnabled ? ( <img src={growthBookLogo} className="App-logo" alt="logo" /> ) : ( <img src={logo} className="App-logo" alt="logo" /> )
-        }
+        <DisplayLogo />
         </p>
         <FeatureString feature="bottom-text-enabled" default="Default" />
         <a
