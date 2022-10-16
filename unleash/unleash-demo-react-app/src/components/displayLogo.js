@@ -8,9 +8,9 @@ import unleashLogo from '../unleash-logo.svg'
 
 export default function DisplayLogo() {
   // Boolean on/off flags
-  const logoSwtichEnabled =  useFlag("logo-switch-enabled")
+  const logoSwitchEnabled =  useFlag("logo-switch-enabled")
 
-  if (logoSwtichEnabled) {
+  if (logoSwitchEnabled) {
     return <img src={unleashLogo} className="App-logo" alt="logo" /> 
   } else {
     return <img src={logo} className="App-logo" alt="logo" /> 
