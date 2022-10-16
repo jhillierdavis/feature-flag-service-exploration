@@ -8,9 +8,9 @@ import { FlagProvider } from '@unleash/proxy-client-react';
 
 const config = {
   // url: 'https://PROXY_HOSTNAME/api/proxy', // or https://UNLEASH_HOSTNAME/api/frontend
-  url: 'http://localhost:4242/api/proxy',
+  url: 'http://localhost:3000/proxy',
   // clientKey: 'PROXYKEY',
-  clientKey: 'default:development.unleash-insecure-api-token',
+  clientKey: 'proxy-client-key',
   refreshInterval: 15,
   appName: 'your-app-name',
   environment: 'dev',
