@@ -1,9 +1,10 @@
 import React from 'react'
-import logo from './logo.svg';
+
 import './App.css';
 
 import Header from './components/header'
 import DisplayLogo from './components/displayLogo'
+import DisplayBottomText from './components/displayBottomText'
 
 import { FlagProvider } from '@unleash/proxy-client-react';
 
@@ -25,9 +26,7 @@ function App() {
       <header className="App-header">
         <Header />
         <DisplayLogo />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <DisplayBottomText />        
         <a
           className="App-link"
           href="https://reactjs.org"
