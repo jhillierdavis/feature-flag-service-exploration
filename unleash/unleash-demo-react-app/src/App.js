@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Header from './components/header'
+import DisplayLogo from './components/displayLogo'
 
 import { FlagProvider } from '@unleash/proxy-client-react';
 
@@ -23,7 +24,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        <img src={logo} className="App-logo" alt="logo" />
+        <DisplayLogo />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
