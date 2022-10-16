@@ -13,3 +13,5 @@ npm install @unleash/proxy-client-react unleash-proxy-client
 References
 
 https://github.com/Unleash/unleash
+https://docs.getunleash.io/how-to/api
+https://docs.getunleash.io/advanced/toggle_variants
