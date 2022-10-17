@@ -23,7 +23,7 @@ function App() {
     const interval = setInterval(() => {
       // Load feature definitions from API
       // In production, we recommend putting a CDN in front of the API endpoint
-      fetch("http://localhost:3100/api/features/key_prod_144d3a5d0a19dc02")
+      fetch("http://localhost:3100/api/features/key_prod_33f63c0eb9987c9c")
         .then((res) => res.json())
         .then((json) => {
           growthbook.setFeatures(json.features);
@@ -55,7 +55,7 @@ function App() {
         <p>
         <DisplayLogo />
         </p>
-        <FeatureString feature="bottom-text-enabled" default="Default" />
+        <FeatureString feature="bottom-text-enabled" default="Edit src/App.js and save to reload." />
         <a
           className="App-link"
           href="https://reactjs.org"
