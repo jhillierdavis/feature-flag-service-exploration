@@ -41,7 +41,7 @@ function App() {
 // Wrap application in LD provider
 export default withLDProvider ({
   // set LD trail (client-side) SDK key
-  clientSideID: '634ab4d0b2761012046b57c7',
+  clientSideID: '634ab4d0b2761012046b57c7', // Test env.
   options: {
     bootstrap: 'localStorage'
   },
