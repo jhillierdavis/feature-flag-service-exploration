@@ -1,5 +1,9 @@
 Simple React App demo. to export Launch Darkly feature flagging service.
 
+# LaunchDarkly log-in
+
+https://app.launchdarkly.com/
+
 # Implementation Steps
 
 ## Initial setup
