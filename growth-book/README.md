@@ -9,6 +9,8 @@
 
 'npm i --save @growthbook/growthbook-react'
 
+'npm install --save react react-dom react-scripts'
+
 'npm audit fix --force'
 
 # References
